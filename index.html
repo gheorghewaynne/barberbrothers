@@ -1,280 +1,328 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>BARBER BROTHERS – Salon de coiffure homme | Chapelle-en-Serval</title>
-  <meta name="description" content="Coupe homme, taille de barbe, forfait complet. Horaires, tarifs, réservation. Salon BARBER BROTHERS à La Chapelle-en-Serval – tradition & style.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://gheorghewaynne.github.io/barberbrothers/">
-  
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Barbershop",
-    "name": "BARBER BROTHERS",
-    "image": "https://gheorghewaynne.github.io/barberbrothers/images/hero.jpg",
-    "telephone": "+33123456789",
-    "url": "https://gheorghewaynne.github.io/barberbrothers/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "842 Rue de Paris",
-      "addressLocality": "La Chapelle-en-Serval",
-      "postalCode": "60520",
-      "addressCountry": "FR"
-    },
-    "openingHoursSpecification": [
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",   "opens": "00:00", "closes": "00:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",  "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",   "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",   "opens": "10:00", "closes": "20:00"}
-    ],
-    "priceRange": "€€"
-  }
-  </script>
-
-  <style>
-    /* Variables et Reset */
-    :root{--black:#1C1C1C;--gold:#C9A227;--white:#FFFFFF;--grey:#F5F5F5}
-    *, *::before, *::after{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:'Roboto',sans-serif;color:var(--white);background:var(--black)}
-    h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    section{padding:6rem 0} /* Augmentation du padding des sections */
-    .container{max-width:1200px;margin:auto;padding:0 1.5rem}
-
-    /* Titres de Section */
-    .container > h2 {
-      text-align: center;
-      margin-bottom: 3rem; 
-      font-size: clamp(2rem, 5vw, 3rem);
-    }
+    <meta charset="utf-8">
+    <title>BARBER BROTHERS – Salon de coiffure homme | Chapelle-en-Serval</title>
+    <meta name="description" content="Coupe homme, taille de barbe, forfait complet. Horaires, tarifs, réservation. Salon BARBER BROTHERS à La Chapelle-en-Serval – tradition & style.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://gheorghewaynne.github.io/barberbrothers/">
     
-    /* Bouton CTA */
-    .btn{background:var(--gold);color:var(--black);padding:.9rem 2.2rem;font-weight:600;letter-spacing:.1em;display:inline-block;transition:.3s}
-    .btn:hover{background:#B8911F;box-shadow:0 0 25px rgba(201,162,39,.4)}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
 
-    /* HEADER */
-    header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    /* Ajout du style pour la classe 'scrolled' du JS */
-    header.scrolled{background:rgba(28,28,28,.95);box-shadow:0 2px 10px rgba(0,0,0,.5)} 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-    .logo{font-size:1.5rem;font-weight:700;letter-spacing:.1em;color:var(--white);cursor:pointer}
-    .logo span{color:var(--gold)}
-    .links{display:flex;gap:2rem;list-style:none}
-    .links a{letter-spacing:.1em;position:relative;transition:color .3s}
-    .links a::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:.3s}
-    .links a:hover::after{width:100%}
-    .burger{display:none;font-size:1.8rem;cursor:pointer;border:none;background:none;color:var(--white)}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    /* Menu Mobile (Mieux structuré) */
-    #mobileMenu{position:fixed;top:64px;left:0;right:0;background:var(--black);padding:1rem;transform:translateY(-120%);transition:transform .4s;z-index:49}
-    #mobileMenu.open{transform:translateY(0)}
-    #mobileMenu a{display:block;padding:.5rem 0;letter-spacing:.1em} /* Correction: display block au lieu de <br> */
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Barbershop",
+        "name": "BARBER BROTHERS",
+        "image": "https://gheorghewaynne.github.io/barberbrothers/images/hero.jpg",
+        "telephone": "+33123456789",
+        "url": "https://gheorghewaynne.github.io/barberbrothers/",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "842 Rue de Paris",
+            "addressLocality": "La Chapelle-en-Serval",
+            "postalCode": "60520",
+            "addressCountry": "FR"
+        },
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",   "opens": "00:00", "closes": "00:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",  "opens": "10:00", "closes": "20:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "20:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",   "opens": "10:00", "closes": "20:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "20:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",   "opens": "10:00", "closes": "20:00"}
+        ],
+        "priceRange": "€€"
+    }
+    </script>
 
-    @media (max-width:768px){.links{display:none}.burger{display:block}}
+    <style>
+        /* Variables et Reset */
+        :root{--black:#1C1C1C;--gold:#C9A227;--white:#FFFFFF;--grey:#F5F5F5}
+        *, *::before, *::after{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Roboto',sans-serif;color:var(--white);background:var(--black)}
+        h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+        a{text-decoration:none;color:inherit}
+        img{max-width:100%;display:block}
+        section{padding:6rem 0} /* Augmentation du padding des sections */
+        .container{max-width:1200px;margin:auto;padding:0 1.5rem}
 
-    /* HERO */
-    #hero{height:100vh;background:url('images/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
-    #hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.6)}
-    #hero .content{position:relative;z-index:2}
-    #hero h1{font-size:clamp(3rem,8vw,6rem);line-height:1}
-    #hero h1 span{color:var(--gold)}
-    #hero p{font-size:clamp(1.2rem,2.5vw,1.8rem);margin:1.5rem 0 2rem}
+        /* Titres de Section */
+        .container > h2 {
+            text-align: center;
+            margin-bottom: 3rem; 
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+        
+        /* Bouton CTA (Générique) */
+        .btn{background:var(--gold);color:var(--black);padding:.9rem 2.2rem;font-weight:600;letter-spacing:.1em;display:inline-block;transition:.3s}
+        .btn:hover{background:#B8911F;box-shadow:0 0 25px rgba(201,162,39,.4)}
 
-    /* SERVICES */
-    #services{background:var(--grey);color:var(--black)}
-    .serv-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
-    .serv-card{background:var(--white);padding:2.5rem 2rem;text-align:center;transition:.3s}
-    .serv-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
-    .serv-card h3{margin:1rem 0 .5rem}
-    .price{font-size:2.5rem;font-weight:bold;color:var(--gold);margin-top:1rem}
+        /* HEADER */
+        header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+        header.scrolled{background:rgba(28,28,28,.95);box-shadow:0 2px 10px rgba(0,0,0,.5)} 
 
-    /* GALERIE */
-    #galerie{background:var(--black)}
-    .gal-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-    .gal-grid img{height:250px;object-fit:cover;transition:transform .3s}
-    .gal-grid img:hover{transform:scale(1.05)}
+        .logo{font-size:1.5rem;font-weight:700;letter-spacing:.1em;color:var(--white);cursor:pointer}
+        .logo span{color:var(--gold)}
+        .links{display:flex;gap:2rem;list-style:none}
+        .links a{letter-spacing:.1em;position:relative;transition:color .3s}
+        .links a::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:.3s}
+        .links a:hover::after{width:100%}
+        .burger{display:none;font-size:1.8rem;cursor:pointer;border:none;background:none;color:var(--white)}
 
-    /* HORAIRES & CONTACT */
-    #horaires{background:var(--grey);color:var(--black)}
-    .hor-grid{display:grid;gap:3rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-    .hor-card{background:var(--white);padding:2rem}
-    .hor-card h3{margin-bottom:1rem}
-    .hor-list li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(0,0,0,.1)}
-    .closed{color:#e57373}
-    .map-container{margin-top:1.5rem}
-    .map-container iframe{width:100%;height:320px;border:0}
+        /* Menu Mobile */
+        #mobileMenu{position:fixed;top:64px;left:0;right:0;background:var(--black);padding:1rem;transform:translateY(-120%);transition:transform .4s;z-index:49}
+        #mobileMenu.open{transform:translateY(0)}
+        #mobileMenu a{display:block;padding:.5rem 0;letter-spacing:.1em}
 
-    /* FOOTER */
-    footer{background:var(--black);color:var(--white);text-align:center;padding:4rem 1rem 2rem;font-size:.9rem}
-    .social{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem}
-    .social a{display:grid;place-items:center;width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;transition:background .3s}
-    .social a:hover{background:var(--gold)}
-  </style>
+        @media (max-width:768px){.links{display:none}.burger{display:block}}
+
+        /* HERO */
+        #hero{height:100vh;background:url('images/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+        #hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.6)}
+        #hero .content{position:relative;z-index:2}
+        #hero h1{font-size:clamp(3rem,8vw,6rem);line-height:1}
+        #hero h1 span{color:var(--gold)}
+        #hero p{font-size:clamp(1.2rem,2.5vw,1.8rem);margin:1.5rem 0 2rem}
+
+        /* SERVICES */
+        #services{background:var(--grey);color:var(--black)}
+        .serv-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+        .serv-card{background:var(--white);padding:2.5rem 2rem;text-align:center;transition:.3s}
+        .serv-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+        .serv-card h3{margin:1rem 0 .5rem}
+        .price{font-size:2.5rem;font-weight:bold;color:var(--gold);margin-top:1rem}
+
+        /* GALERIE */
+        #galerie{background:var(--black)}
+        .gal-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+        .gal-grid img{height:250px;object-fit:cover;transition:transform .3s}
+        .gal-grid img:hover{transform:scale(1.05)}
+
+        /* HORAIRES & CONTACT (Styles améliorés) */
+        #horaires{background:var(--grey);color:var(--black)}
+        .hor-grid{display:grid;gap:3rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+        .hor-card{background:var(--white);padding:2rem;border-radius: 5px;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);} /* Ajout d'ombre/bordures */
+        .hor-card h3{margin-bottom:1rem}
+        .hor-list li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(0,0,0,.1)}
+        .closed{color:#e57373}
+        .map-container{margin-top:1.5rem}
+        .map-container iframe{width:100%;height:320px;border:0}
+
+        /* NOUVEAUX STYLES CTA ET SOCIAL DANS LA SECTION CONTACT */
+        .cta-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta-button { 
+            background: var(--gold);
+            color: var(--black);
+            padding: 1.2rem 3rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            display: inline-block;
+            border-radius: 4px;
+            transition: .3s;
+            box-shadow: 0 4px 15px rgba(201,162,39,.3);
+        }
+        .cta-button:hover {
+            background: #B8911F;
+            box-shadow: 0 4px 20px rgba(201,162,39,.6);
+            transform: translateY(-2px);
+        }
+        .contact-social { /* Style pour les icônes sociales dans la carte contact */
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .contact-social a {
+            color: var(--black); 
+            font-size: 1.8rem;
+            transition: color .3s;
+        }
+        .contact-social a:hover {
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+        footer{background:var(--black);color:var(--white);text-align:center;padding:4rem 1rem 2rem;font-size:.9rem}
+        .social{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem}
+        .social a{display:grid;place-items:center;width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;transition:background .3s}
+        .social a:hover{background:var(--gold)}
+    </style>
 </head>
 
 <body>
 <header id="header">
-  <div class="container nav">
-    <div class="logo" onclick="scrollToId('hero')">BARBER <span>BROTHERS</span></div>
+    <div class="container nav">
+        <div class="logo" onclick="scrollToId('hero')">BARBER <span>BROTHERS</span></div>
+        
+        <nav>
+            <ul class="links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#horaires">Horaires & Contact</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+            </ul>
+        </nav>
+        
+        <button class="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
     
-    <nav>
-      <ul class="links">
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-        <li><a href="#horaires">Horaires</a></li>
-      </ul>
-    </nav>
-    
-    <button class="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileMenu">☰</button>
-  </div>
-  
-  <div id="mobileMenu" role="navigation">
-    <a href="#hero" onclick="closeAndScroll('hero')">Accueil</a>
-    <a href="#services" onclick="closeAndScroll('services')">Services</a>
-    <a href="#galerie" onclick="closeAndScroll('galerie')">Galerie</a>
-    <a href="#horaires" onclick="closeAndScroll('horaires')">Horaires</a>
-  </div>
+    <div id="mobileMenu" role="navigation">
+        <a href="#hero" onclick="closeAndScroll('hero')">Accueil</a>
+        <a href="#services" onclick="closeAndScroll('services')">Services</a>
+        <a href="#horaires" onclick="closeAndScroll('horaires')">Horaires & Contact</a>
+        <a href="#galerie" onclick="closeAndScroll('galerie')">Galerie</a>
+    </div>
 </header>
 
 <section id="hero">
-  <div class="content">
-    <h1>BARBER <span>BROTHERS</span></h1>
-    <p>L'art de la coupe et de la barbe</p>
-    <a href="#services" class="btn">DÉCOUVREZ NOS SERVICES</a>
-  </div>
+    <div class="content">
+        <h1>BARBER <span>BROTHERS</span></h1>
+        <p>L'art de la coupe et de la barbe</p>
+        <a href="#services" class="btn">DÉCOUVREZ NOS SERVICES</a>
+    </div>
 </section>
 
 <section id="services">
-  <div class="container">
-    <h2>Nos Services</h2>
-    <div class="serv-grid">
-      <div class="serv-card">
-        <h3>Coupe Homme</h3>
-        <p>Coupe personnalisée adaptée à votre style et morphologie.</p>
-        <div class="price">25 €</div>
-      </div>
-      <div class="serv-card">
-        <h3>Taille de Barbe</h3>
-        <p>Taille et entretien expert de votre barbe.</p>
-        <div class="price">15 €</div>
-      </div>
-      <div class="serv-card">
-        <h3>Forfait Coupe + Barbe</h3>
-        <p>L'expérience complète pour un look impeccable.</p>
-        <div class="price">35 €</div>
-      </div>
+    <div class="container">
+        <h2>Nos Services</h2>
+        <div class="serv-grid">
+            <div class="serv-card">
+                <h3>Coupe Homme</h3>
+                <p>Coupe personnalisée adaptée à votre style et morphologie.</p>
+                <div class="price">25 €</div>
+            </div>
+            <div class="serv-card">
+                <h3>Taille de Barbe</h3>
+                <p>Taille et entretien expert de votre barbe.</p>
+                <div class="price">15 €</div>
+            </div>
+            <div class="serv-card">
+                <h3>Forfait Coupe + Barbe</h3>
+                <p>L'expérience complète pour un look impeccable.</p>
+                <div class="price">35 €</div>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-
-<section id="galerie">
-  <div class="container">
-    <h2>Galerie</h2>
-    <div class="gal-grid">
-      <img src="images/gal1.jpg" alt="Coupe réalisée dans le salon BARBER BROTHERS" loading="lazy">
-      <img src="images/gal2.jpg" alt="Photo d'une barbe soignée" loading="lazy">
-      <img src="images/gal3.jpg" alt="Intérieur du salon de coiffure" loading="lazy">
-      <img src="images/gal4.jpg" alt="Photo Avant/Après d'une transformation" loading="lazy">
-    </div>
-  </div>
 </section>
 
 <section id="horaires">
-  <div class="container">
-    <h2>Horaires & Contact</h2>
-    <div class="hor-grid">
-      <div class="hor-card">
-        <h3>Horaires d'ouverture</h3>
-        <ul class="hor-list">
-          <li><span>Lundi</span><span class="closed">Fermé</span></li>
-          <li><span>Mardi</span><span>10h00 - 20h00</span></li>
-          <li><span>Mercredi</span><span>10h00 - 20h00</span></li>
-          <li><span>Jeudi</span><span>10h00 - 20h00</span></li>
-          <li><span>Vendredi</span><span>10h00 - 20h00</span></li>
-          <li><span>Samedi</span><span>10h00 - 20h00</span></li>
-          <li><span>Dimanche</span><span>10h00 - 20h00</span></li>
-        </ul>
-        <p style="margin-top:1rem;font-size:.9rem;color:#555">Pas de rendez-vous nécessaire – premier arrivé, premier servi !</p>
-      </div>
-      <div class="hor-card">
-        <h3>Adresse</h3>
-        <p>842 Rue de Paris<br>60520 La Chapelle-en-Serval</p>
-        <p style="margin-top:1rem"><strong>Tél :</strong> <a href="tel:+33123456789" style="color:var(--gold)">01 23 45 67 89</a></p>
-        
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1558.6200251786196!2d2.585579339391068!3d49.12563319082046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e62a05f15b3c33%3A0xc6e4b2d56c802271!2s842%20Rue%20de%20Paris%2C%2060520%20La%20Chapelle-en-Serval%2C%20France!5e0!3m2!1sen!2sfr!4v1677840000000!5m2!1sen!2sfr"
-            width="100%"
-            height="320"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Localisation du salon BARBER BROTHERS">
-          </iframe>
+    <div class="container">
+        <h2>Horaires & Contact</h2>
+        <div class="hor-grid">
+            <div class="hor-card">
+                <h3>Horaires d'ouverture</h3>
+                <ul class="hor-list">
+                    <li><span>Lundi</span><span class="closed">Fermé</span></li>
+                    <li><span>Mardi</span><span>10h00 - 20h00</span></li>
+                    <li><span>Mercredi</span><span>10h00 - 20h00</span></li>
+                    <li><span>Jeudi</span><span>10h00 - 20h00</span></li>
+                    <li><span>Vendredi</span><span>10h00 - 20h00</span></li>
+                    <li><span>Samedi</span><span>10h00 - 20h00</span></li>
+                    <li><span>Dimanche</span><span>10h00 - 20h00</span></li>
+                </ul>
+            </div>
+            <div class="hor-card">
+                <h3>Informations & Accès</h3>
+                <p>842 Rue de Paris<br>60520 La Chapelle-en-Serval</p>
+                <p style="margin-top:1rem">
+                    <strong>Tél :</strong> <a href="tel:+33123456789" style="color:var(--gold)">01 23 45 67 89</a>
+                </p>
+                
+                <div class="cta-container">
+                    <a href="LIEN_DE_RESERVATION_ICI" class="cta-button">Prendre Rendez-vous</a>
+                </div>
+
+                <div class="contact-social">
+                    <a href="https://instagram.com/barberbrothers" target="_blank" rel="noopener noreferrer" aria-label="Instagram de BARBER BROTHERS">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/barberbrothers" target="_blank" rel="noopener noreferrer" aria-label="Facebook de BARBER BROTHERS">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1558.6200251786196!2d2.585579339391068!3d49.12563319082046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e62a05f15b3c33%3A0xc6e4b2d56c802271!2s842%20Rue%20de%20Paris%2C%2060520%20La%20Chapelle-en-Serval%2C%20France!5e0!3m2!1sen!2sfr!4v1677840000000!5m2!1sen!2sfr"
+                        title="Localisation du salon BARBER BROTHERS"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</section>
+
+
+<section id="galerie">
+    <div class="container">
+        <h2>Galerie</h2>
+        <div class="gal-grid">
+            <img src="images/gal1.jpg" alt="Coupe réalisée dans le salon BARBER BROTHERS" loading="lazy">
+            <img src="images/gal2.jpg" alt="Photo d'une barbe soignée" loading="lazy">
+            <img src="images/gal3.jpg" alt="Intérieur du salon de coiffure" loading="lazy">
+            <img src="images/gal4.jpg" alt="Photo Avant/Après d'une transformation" loading="lazy">
+        </div>
+    </div>
 </section>
 
 <footer>
-  <div class="container">
-    <div class="social">
-      <a href="https://instagram.com/barberbrothers" target="_blank" rel="noopener noreferrer" aria-label="Instagram de BARBER BROTHERS">📷</a>
-      <a href="https://facebook.com/barberbrothers" target="_blank" rel="noopener noreferrer" aria-label="Facebook de BARBER BROTHERS">📘</a>
+    <div class="container">
+        <div class="social">
+            <a href="https://instagram.com/barberbrothers" target="_blank" rel="noopener noreferrer" aria-label="Instagram de BARBER BROTHERS"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/barberbrothers" target="_blank" rel="noopener noreferrer" aria-label="Facebook de BARBER BROTHERS"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>© <span id="year"></span> BARBER BROTHERS – Tous droits réservés</p>
     </div>
-    <p>© <span id="year"></span> BARBER BROTHERS – Tous droits réservés</p>
-  </div>
 </footer>
 
 <script>
-  // Délai de transition du menu mobile en millisecondes (synchronisé avec le CSS .4s)
-  const MOBILE_MENU_TRANSITION_DURATION = 400;
+    // Délai de transition du menu mobile en millisecondes (synchronisé avec le CSS .4s)
+    const MOBILE_MENU_TRANSITION_DURATION = 400;
 
-  // Header "Sticky" (maintenu) : Ajout de la classe 'scrolled'
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  });
+    // Header "Sticky" (maintenu) : Ajout de la classe 'scrolled'
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
 
-  // Fonction de défilement générique
-  function scrollToId(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
+    // Fonction de défilement générique
+    function scrollToId(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
 
-  // Toggle du menu mobile (Ajout de la gestion A11Y aria-expanded)
-  const mobileMenu = document.getElementById('mobileMenu');
-  const burgerButton = document.querySelector('.burger');
+    // Toggle du menu mobile (Ajout de la gestion A11Y aria-expanded)
+    const mobileMenu = document.getElementById('mobileMenu');
+    const burgerButton = document.querySelector('.burger');
 
-  function toggleMenu() {
-    const isMenuOpen = mobileMenu.classList.toggle('open');
-    burgerButton.setAttribute('aria-expanded', isMenuOpen);
-  }
+    function toggleMenu() {
+        const isMenuOpen = mobileMenu.classList.toggle('open');
+        burgerButton.setAttribute('aria-expanded', isMenuOpen);
+    }
 
-  // Fermer le menu PUIS défiler (Meilleure UX pour éviter le défilement brusque)
-  function closeAndScroll(id) {
-    toggleMenu(); // Ferme le menu et met à jour l'état aria-expanded
-    setTimeout(() => {
-      scrollToId(id);
-    }, MOBILE_MENU_TRANSITION_DURATION);
-  }
+    // Fermer le menu PUIS défiler (Meilleure UX pour éviter le défilement brusque)
+    function closeAndScroll(id) {
+        toggleMenu(); // Ferme le menu et met à jour l'état aria-expanded
+        setTimeout(() => {
+            scrollToId(id);
+        }, MOBILE_MENU_TRANSITION_DURATION);
+    }
 
-  // Année dynamique dans le footer
-  document.getElementById('year').textContent = new Date().getFullYear();
+    // Année dynamique dans le footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
