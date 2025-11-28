@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ========== SEO & PERFORMANCE ========== -->
+  <meta charset="utf-8">
+  <title>BARBER BROTHERS – Salon de coiffure homme | Paris</title>
+  <meta name="description" content="Coupe homme, taille de barbe, forfait complet. Horaires, tarifs, réservation en ligne. Salon BARBER BROTHERS à Paris – tradition & style.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+  <link rel="canonical" href="https://VOTRE-PSEUDO.github.io/barberbrothers/">
+
+  <!-- ========== SCHEMA.ORG LOCALBUSINESS ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Barbershop",
+    "name": "BARBER BROTHERS",
+    "image": "https://VOTRE-PSEUDO.github.io/barberbrothers/images/hero.jpg",
+    "telephone": "+33123456789",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Rue de la Tondeuse",
+      "addressLocality": "Paris",
+      "postalCode": "75000",
+      "addressCountry": "FR"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",   "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "09:00", "closes": "17:00"}
+    ],
+    "priceRange": "€€"
+  }
+  </script>
+
+  <!-- ========== GOOGLE FONTS ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ========== STYLES ========== -->
+  <style>
+    :root{
+      --black:#1C1C1C;
+      --gold:#C9A227;
+      --white:#FFFFFF;
+      --grey:#F5F5F5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Roboto',sans-serif;color:var(--black);background:var(--black)}
+    h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    /* HEADER */
+    header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+    header.scrolled{background:rgba(28,28,28,.95);box-shadow:0 5px 20px rgba(0,0,0,.5)}
+    .container{max-width:1200px;margin:auto;padding:0 1.5rem}
+    nav ul{display:flex;gap:2rem;list-style:none}
+    nav a{position:relative;font-size:.9rem;letter-spacing:.1em;color:var(--white)}
+    nav a::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:.3s}
+    nav a:hover::after{width:100%}
+    .logo{display:flex;align-items:center;gap:.5rem;cursor:pointer}
+    .logo txt1{font-size:1.3rem;font-weight:bold;color:var(--white);letter-spacing:.2em}
+    .logo txt2{font-size:.65rem;color:var(--gold);letter-spacing:.3em}
+    /* HERO */
+    #hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;color:var(--white)}
+    #hero::before{content:'';position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;filter:brightness(.5)}
+    #hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:1}
+    #hero h1 span{color:var(--gold)}
+    #hero p{font-size:clamp(1.2rem,2.5vw,1.8rem);margin:1.5rem 0 2rem}
+    .btn{background:var(--gold);color:var(--black);padding:.9rem 2.2rem;font-weight:600;letter-spacing:.1em;transition:.3s}
+    .btn:hover{background:#B8911F;box-shadow:0 0 25px rgba(201,162,39,.4)}
+    /* SERVICES */
+    #services{background:var(--grey);padding:6rem 0}
+    .grid3{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+    .card{background:var(--white);padding:3rem 2rem;text-align:center;position:relative;transition:.3s}
+    .card:hover{box-shadow:0 10px 40px rgba(0,0,0,.15)}
+    .card gold{border:2px solid var(--gold)}
+    .card h3{margin:1.5rem 0 .5rem}
+    .price{font-size:2.5rem;font-weight:bold;color:var(--gold)}
+    /* HORAIRES & CONTACT */
+    #horaires{padding:6rem 0;background:var(--black);color:var(--white)}
+    .flex2{display:flex;flex-wrap:wrap;gap:3rem}
+    .flex2 > *{flex:1 1 320px}
+    .horaires-list li{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .closed{color:#e57373}
+    .map-container iframe{width:100%;height:320px;border:0}
+    /* GALERIE */
+    #galerie{padding:6rem 0;background:var(--grey)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+    .gallery img{object-fit:cover;height:250px;transition:transform .3s}
+    .gallery img:hover{transform:scale(1.05)}
+    /* FOOTER */
+    footer{background:var(--black);color:var(--white);padding:4rem 0 1rem;text-align:center;font-size:.85rem}
+    .social{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}
+    .social a{display:grid;place-items:center;width:44px;height:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:.3s}
+    .social a:hover{background:var(--gold);border-color:var(--gold)}
+    /* RESPONSIVE */
+    @media (max-width:768px){
+      nav ul{display:none}
+      .menu-icon{display:block;font-size:1.8rem;cursor:pointer;color:var(--white)}
+      #mobileMenu{position:fixed;top:64px;left:0;right:0;background:rgba(28,28,28,.98);padding:1.5rem;transform:translateY(-120%);transition:.4s}
+      #mobileMenu.open{transform:translateY(0)}
+    }
+    /* ANIMATIONS */
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .fade{animation:fadeIn 1s both}
+  </style>
+</head>
+
+<body>
+<!-- ========== HEADER ========== -->
+<header id="header">
+  <div class="container flex align-center space-between">
+    <div class="logo" onclick="scrollToId('hero')">
+      <span class="logo txt1">BARBER</span><span class="logo txt2">BROTHERS</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#horaires">Horaires</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+      </ul>
+    </nav>
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  </div>
+  <div id="mobileMenu">
+    <a href="#hero" onclick="toggleMenu()">Accueil</a><br>
+    <a href="#services" onclick="toggleMenu()">Services</a><br>
+    <a href="#horaires" onclick="toggleMenu()">Horaires</a><br>
+    <a href="#galerie" onclick="toggleMenu()">Galerie</a>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section id="hero" class="fade">
+  <h1>BARBER <span>BROTHERS</span></h1>
+  <p>L'art de la coupe et de la barbe</p>
+  <a href="#services" class="btn">DÉCOUVREZ NOS SERVICES</a>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section id="services">
+  <div class="container">
+    <h2>Nos Services</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>Coupe Homme</h3>
+        <p>Coupe personnalisée adaptée à votre style et morphologie.</p>
+        <div class="price">25 €</div>
+      </div>
+      <div class="card">
+        <h3>Taille de Barbe</h3>
+        <p>Taille et entretien expert de votre barbe.</p>
+        <div class="price">15 €</div>
+      </div>
+      <div class="card gold">
+        <span style="background:var(--gold);color:var(--black);font-size:.7rem;padding:.2rem .6rem;letter-spacing:.1em">POPULAIRE</span>
+        <h3>Forfait Coupe + Barbe</h3>
+        <p>L'expérience complète pour un look impeccable.</p>
+        <div class="price">35 €</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HORAIRES & CONTACT + GOOGLE MAP ========== -->
+<section id="horaires">
+  <div class="container">
+    <h2>Horaires & Contact</h2>
+    <div class="flex2">
+      <div>
+        <h3>Horaires d'ouverture</h3>
+        <ul class="horaires-list">
+          <li><span>Lundi</span><span class="closed">Fermé</span></li>
+          <li><span>Mardi</span><span>10h00 - 19h00</span></li>
+          <li><span>Mercredi</span><span>10h00 - 19h00</span></li>
+          <li><span>Jeudi</span><span>10h00 - 19h00</span></li>
+          <li><span>Vendredi</span><span>10h00 - 19h00</span></li>
+          <li><span>Samedi</span><span>9h00 - 17h00</span></li>
+          <li><span>Dimanche</span><span class="closed">Fermé</span></li>
+        </ul>
+        <p style="margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.6)">Pas de rendez-vous nécessaire – premier arrivé, premier servi !</p>
+      </div>
+      <div>
+        <h3>Adresse</h3>
+        <p>123 Rue de la Tondeuse<br>75000 PARIS</p>
+        <p style="margin-top:1rem"><strong>Tél :</strong> <a href="tel:+33123456789" style="color:var(--gold)">01 23 45 67 89</a></p>
+
+        <!-- ========== GOOGLE MAPS ========== -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916252588845!2d2.285962215674342!3d48.85661407928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUxJzI0LjAiTiAywrAxNycwNS4wIkU!5e0!3m2!1sfr!2sfr!4v1234567890123"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALERIE ========== -->
+<section id="galerie">
+  <div class="container">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="images/gal1.jpg" alt="Coupe réalisée">
+      <img src="images/gal2.jpg" alt="Barbe soignée">
+      <img src="images/gal3.jpg" alt="Salon">
+      <img src="images/gal4.jpg" alt="Avant/Après">
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="social">
+      <a href="https://instagram.com/barberbrothers" target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
+      <a href="https://facebook.com/barberbrothers" target="_blank" rel="noreferrer" aria-label="Facebook">📘</a>
+    </div>
+    <p>© <span id="year"></span> BARBER BROTHERS – Tous droits réservés</p>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+  /* Sticky header */
+  window.addEventListener('scroll',()=>{
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY>50);
+  });
+  /* Smooth scroll */
+  function scrollToId(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  }
+  /* Mobile menu */
+  function toggleMenu(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  /* Dynamic year */
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
