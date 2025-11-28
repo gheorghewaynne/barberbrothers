@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- ========== SEO & PERFORMANCE ========== -->
   <meta charset="utf-8">
-  <title>BARBER BROTHERS – Salon de coiffure homme | Paris</title>
-  <meta name="description" content="Coupe homme, taille de barbe, forfait complet. Horaires, tarifs, réservation en ligne. Salon BARBER BROTHERS à Chapelle-en-Serval – tradition & style.">
+  <title>BARBER BROTHERS – Salon de coiffure homme | Chapelle-en-Serval</title>
+  <meta name="description" content="Coupe homme, taille de barbe, forfait complet. Horaires, tarifs, réservation en ligne. Salon BARBER BROTHERS à La Chapelle-en-Serval – tradition & style.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
   <link rel="canonical" href="https://gheorghewaynne.github.io/barberbrothers/">
 
-  <!-- ========== SCHEMA.ORG LOCALBUSINESS ========== -->
+  <!-- POLICES GOOGLE (sans espace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- SCHEMA.ORG -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,45 +34,37 @@
       {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "10:00", "closes": "20:00"},
       {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "10:00", "closes": "20:00"},
       {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",  "opens": "10:00", "closes": "20:00"}
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",    "opens": "10:00", "closes": "20:00"}
     ],
     "priceRange": "€€"
   }
   </script>
 
-  <!-- ========== GOOGLE FONTS ========== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- ========== STYLES ========== -->
   <style>
-    :root{
-      --black:#1C1C1C;
-      --gold:#C9A227;
-      --white:#FFFFFF;
-      --grey:#F5F5F5;
-    }
+    :root{--black:#1C1C1C;--gold:#C9A227;--white:#FFFFFF;--grey:#F5F5F5}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:'Roboto',sans-serif;color:var(--black);background:var(--black)}
+    body{font-family:'Roboto',sans-serif;color:var(--white);background:var(--black)}
     h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
     /* HEADER */
     header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
     header.scrolled{background:rgba(28,28,28,.95);box-shadow:0 5px 20px rgba(0,0,0,.5)}
-    .container{max-width:1200px;margin:auto;padding:0 1.5rem}
+    .container{max-width:1200px;margin:auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:flex;flex-direction:column;cursor:pointer}
+    .logo .brand{font-size:1.4rem;font-weight:700;color:var(--white);letter-spacing:.2em}
+    .logo .sub{font-size:.65rem;color:var(--gold);letter-spacing:.3em}
     nav ul{display:flex;gap:2rem;list-style:none}
     nav a{position:relative;font-size:.9rem;letter-spacing:.1em;color:var(--white)}
     nav a::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:.3s}
     nav a:hover::after{width:100%}
-    .logo{display:flex;align-items:center;gap:.5rem;cursor:pointer}
-    .logo txt1{font-size:1.3rem;font-weight:bold;color:var(--white);letter-spacing:.2em}
-    .logo txt2{font-size:.65rem;color:var(--gold);letter-spacing:.3em}
+    .menu-icon{display:none;font-size:1.8rem;color:var(--white);cursor:pointer}
+    @media (max-width:768px){nav ul{display:none}.menu-icon{display:block}}
     /* HERO */
-    #hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;color:var(--white)}
-    #hero::before{content:'';position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;filter:brightness(.5)}
+    #hero{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;text-align:center;color:var(--white);background:url('images/hero.jpg') center/cover no-repeat}
+    #hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.6)}
+    #hero *{position:relative;z-index:2}
     #hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:1}
     #hero h1 span{color:var(--gold)}
     #hero p{font-size:clamp(1.2rem,2.5vw,1.8rem);margin:1.5rem 0 2rem}
@@ -80,7 +76,7 @@
     .card{background:var(--white);padding:3rem 2rem;text-align:center;position:relative;transition:.3s}
     .card:hover{box-shadow:0 10px 40px rgba(0,0,0,.15)}
     .card gold{border:2px solid var(--gold)}
-    .card h3{margin:1.5rem 0 .5rem}
+    .card h3{margin:1.5rem 0 .5rem;color:var(--black)}
     .price{font-size:2.5rem;font-weight:bold;color:var(--gold)}
     /* HORAIRES & CONTACT */
     #horaires{padding:6rem 0;background:var(--black);color:var(--white)}
@@ -99,25 +95,20 @@
     .social{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}
     .social a{display:grid;place-items:center;width:44px;height:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:.3s}
     .social a:hover{background:var(--gold);border-color:var(--gold)}
-    /* RESPONSIVE */
-    @media (max-width:768px){
-      nav ul{display:none}
-      .menu-icon{display:block;font-size:1.8rem;cursor:pointer;color:var(--white)}
-      #mobileMenu{position:fixed;top:64px;left:0;right:0;background:rgba(28,28,28,.98);padding:1.5rem;transform:translateY(-120%);transition:.4s}
-      #mobileMenu.open{transform:translateY(0)}
-    }
-    /* ANIMATIONS */
-    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    .fade{animation:fadeIn 1s both}
+    /* MOBILE MENU */
+    #mobileMenu{position:fixed;top:64px;left:0;right:0;background:rgba(28,28,28,.98);padding:1.5rem;transform:translateY(-120%);transition:.4s}
+    #mobileMenu.open{transform:translateY(0)}
+    #mobileMenu a{display:block;padding:.5rem 0;color:var(--white);letter-spacing:.1em}
   </style>
 </head>
 
 <body>
 <!-- ========== HEADER ========== -->
 <header id="header">
-  <div class="container flex align-center space-between">
+  <div class="container">
     <div class="logo" onclick="scrollToId('hero')">
-      <span class="logo txt1">BARBER</span><span class="logo txt2">BROTHERS</span>
+      <span class="brand">BARBER</span>
+      <span class="sub">BROTHERS</span>
     </div>
     <nav>
       <ul>
@@ -130,17 +121,17 @@
     <span class="menu-icon" onclick="toggleMenu()">☰</span>
   </div>
   <div id="mobileMenu">
-    <a href="#hero" onclick="toggleMenu()">Accueil</a><br>
-    <a href="#services" onclick="toggleMenu()">Services</a><br>
-    <a href="#horaires" onclick="toggleMenu()">Horaires</a><br>
+    <a href="#hero" onclick="toggleMenu()">Accueil</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#horaires" onclick="toggleMenu()">Horaires</a>
     <a href="#galerie" onclick="toggleMenu()">Galerie</a>
   </div>
 </header>
 
 <!-- ========== HERO ========== -->
-<section id="hero" class="fade">
+<section id="hero">
   <h1>BARBER <span>BROTHERS</span></h1>
-  <p style="display:block;margin-top:1rem">L'art de la coupe et de la barbe</p>
+  <p>L'art de la coupe et de la barbe</p>
   <a href="#services" class="btn">DÉCOUVREZ NOS SERVICES</a>
 </section>
 
@@ -192,10 +183,10 @@
         <p>842 Rue de Paris<br>60520 La Chapelle-en-Serval</p>
         <p style="margin-top:1rem"><strong>Tél :</strong> <a href="tel:+33123456789" style="color:var(--gold)">01 23 45 67 89</a></p>
 
-        <!-- ========== GOOGLE MAPS ========== -->
+        <!-- GOOGLE MAP CHAPPELLE-EN-SERVAL -->
         <div class="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916252588845!2d2.285962215674342!3d48.85661407928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUxJzI0LjAiTiAywrAxNycwNS4wIkU!5e0!3m2!1sfr!2sfr!4v1234567890123"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.2!2d2.616!3d49.233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6053f4c4e7c3d%3A0x0!2zNDnCsDEzJzU5LjAiTiAyrDA2JzU3LjYiRQ!5e0!3m2!1sfr!2sfr!4v1234567890123"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
@@ -230,7 +221,6 @@
   </div>
 </footer>
 
-<!-- ========== SCRIPTS ========== -->
 <script>
   /* Sticky header */
   window.addEventListener('scroll',()=>{
