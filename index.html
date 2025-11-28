@@ -2,44 +2,13 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>BARBER BROTHERS – Salon de coiffure homme | Chapelle-en-Serval</title>
-  <meta name="description" content="Coupe homme, taille de barbe, forfait complet. Horaires, tarifs, réservation en ligne. Salon BARBER BROTHERS à La Chapelle-en-Serval – tradition & style.">
+  <title>BARBER BROTHERS – Salon homme Chapelle-en-Serval</title>
+  <meta name="description" content="Coupe, barbe, forfait. Horaires, tarifs, réservation. Salon BARBER BROTHERS à La Chapelle-en-Serval – tradition & style.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
-  <link rel="canonical" href="https://gheorghewaynne.github.io/barberbrothers/">
-
-  <!-- POLICES GOOGLE (sans espace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- SCHEMA.ORG -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Barbershop",
-    "name": "BARBER BROTHERS",
-    "image": "https://gheorghewaynne.github.io/barberbrothers/images/hero.jpg",
-    "telephone": "+33123456789",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "842 Rue de Paris",
-      "addressLocality": "La Chapelle-en-Serval",
-      "postalCode": "60520",
-      "addressCountry": "FR"
-    },
-    "openingHoursSpecification": [
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",   "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "10:00", "closes": "20:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",    "opens": "10:00", "closes": "20:00"}
-    ],
-    "priceRange": "€€"
-  }
-  </script>
-
   <style>
     :root{--black:#1C1C1C;--gold:#C9A227;--white:#FFFFFF;--grey:#F5F5F5}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -48,160 +17,120 @@
     h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em}
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
+    section{padding:4rem 0}
+    .container{max-width:1200px;margin:auto;padding:0 1.5rem}
+
     /* HEADER */
-    header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
-    header.scrolled{background:rgba(28,28,28,.95);box-shadow:0 5px 20px rgba(0,0,0,.5)}
-    .container{max-width:1200px;margin:auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:flex;flex-direction:column;cursor:pointer}
-    .logo .brand{font-size:1.4rem;font-weight:700;color:var(--white);letter-spacing:.2em}
-    .logo .sub{font-size:.65rem;color:var(--gold);letter-spacing:.3em}
-    nav ul{display:flex;gap:2rem;list-style:none}
-    nav a{position:relative;font-size:.9rem;letter-spacing:.1em;color:var(--white)}
-    nav a::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:.3s}
-    nav a:hover::after{width:100%}
-    .menu-icon{display:none;font-size:1.8rem;color:var(--white);cursor:pointer}
-    @media (max-width:768px){nav ul{display:none}.menu-icon{display:block}}
+    header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(28,28,28,.95);box-shadow:0 2px 10px rgba(0,0,0,.5)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-size:1.5rem;font-weight:700;letter-spacing:.1em;color:var(--white)}
+    .logo span{color:var(--gold)}
+    .links{display:flex;gap:2rem;list-style:none}
+    .links a{letter-spacing:.1em;transition:color .3s}
+    .links a:hover{color:var(--gold)}
+    .burger{display:none;font-size:1.8rem;cursor:pointer}
+    @media (max-width:768px){.links{display:none}.burger{display:block}}
+
     /* HERO */
-    #hero{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;text-align:center;color:var(--white);background:url('images/hero.jpg') center/cover no-repeat}
+    #hero{height:100vh;background:url('images/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
     #hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.6)}
-    #hero *{position:relative;z-index:2}
-    #hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:1}
+    #hero .content{position:relative;z-index:2}
+    #hero h1{font-size:clamp(3rem,8vw,6rem);line-height:1}
     #hero h1 span{color:var(--gold)}
     #hero p{font-size:clamp(1.2rem,2.5vw,1.8rem);margin:1.5rem 0 2rem}
     .btn{background:var(--gold);color:var(--black);padding:.9rem 2.2rem;font-weight:600;letter-spacing:.1em;transition:.3s}
     .btn:hover{background:#B8911F;box-shadow:0 0 25px rgba(201,162,39,.4)}
+
     /* SERVICES */
-    #services{background:var(--grey);padding:6rem 0}
-    .grid3{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
-    .card{background:var(--white);padding:3rem 2rem;text-align:center;position:relative;transition:.3s}
-    .card:hover{box-shadow:0 10px 40px rgba(0,0,0,.15)}
-    .card gold{border:2px solid var(--gold)}
-    .card h3{margin:1.5rem 0 .5rem;color:var(--black)}
-    .price{font-size:2.5rem;font-weight:bold;color:var(--gold)}
+    #services{background:var(--grey);color:var(--black)}
+    .serv-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+    .serv-card{background:var(--white);padding:2.5rem 2rem;text-align:center;transition:.3s}
+    .serv-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+    .serv-card h3{margin:1rem 0 .5rem}
+    .price{font-size:2.5rem;font-weight:bold;color:var(--gold);margin-top:1rem}
+
+    /* GALERIE */
+    #galerie{background:var(--black)}
+    .gal-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+    .gal-grid img{height:250px;object-fit:cover;transition:transform .3s}
+    .gal-grid img:hover{transform:scale(1.05)}
+
     /* HORAIRES & CONTACT */
-    #horaires{padding:6rem 0;background:var(--black);color:var(--white)}
-    .flex2{display:flex;flex-wrap:wrap;gap:3rem}
-    .flex2 > *{flex:1 1 320px}
-    .horaires-list li{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    #horaires{background:var(--grey);color:var(--black)}
+    .hor-grid{display:grid;gap:3rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .hor-card{background:var(--white);padding:2rem}
+    .hor-card h3{margin-bottom:1rem}
+    .hor-list li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(0,0,0,.1)}
     .closed{color:#e57373}
     .map-container iframe{width:100%;height:320px;border:0}
-    /* GALERIE */
-    #galerie{padding:6rem 0;background:var(--grey)}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
-    .gallery img{object-fit:cover;height:250px;transition:transform .3s}
-    .gallery img:hover{transform:scale(1.05)}
+
     /* FOOTER */
-    footer{background:var(--black);color:var(--white);padding:4rem 0 1rem;text-align:center;font-size:.85rem}
-    .social{display:flex;gap:1rem;justify-content:center;margin:1.5rem 0}
-    .social a{display:grid;place-items:center;width:44px;height:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:.3s}
-    .social a:hover{background:var(--gold);border-color:var(--gold)}
-    /* MOBILE MENU */
-    #mobileMenu{position:fixed;top:64px;left:0;right:0;background:rgba(28,28,28,.98);padding:1.5rem;transform:translateY(-120%);transition:.4s}
-    #mobileMenu.open{transform:translateY(0)}
-    #mobileMenu a{display:block;padding:.5rem 0;color:var(--white);letter-spacing:.1em}
+    footer{background:var(--black);text-align:center;padding:2rem 1rem;font-size:.9rem}
+    .social{display:flex;gap:1rem;justify-content:center;margin-bottom:1rem}
+    .social a{display:grid;place-items:center;width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;transition:background .3s}
+    .social a:hover{background:var(--gold)}
   </style>
 </head>
 
 <body>
-<!-- ========== HEADER ========== -->
-<header id="header">
-  <div class="container">
-    <div class="logo" onclick="scrollToId('hero')">
-      <span class="brand">BARBER</span>
-      <span class="sub">BROTHERS</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#horaires">Horaires</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-      </ul>
-    </nav>
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <div class="logo" onclick="scrollToId('hero')">BARBER <span>BROTHERS</span></div>
+    <ul class="links">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+    </ul>
+    <span class="burger" onclick="toggleMenu()">☰</span>
   </div>
-  <div id="mobileMenu">
-    <a href="#hero" onclick="toggleMenu()">Accueil</a>
-    <a href="#services" onclick="toggleMenu()">Services</a>
+  <div id="mobileMenu" style="position:fixed;top:64px;left:0;right:0;background:var(--black);padding:1rem;transform:translateY(-120%);transition:.4s">
+    <a href="#hero" onclick="toggleMenu()">Accueil</a><br>
+    <a href="#services" onclick="toggleMenu()">Services</a><br>
+    <a href="#galerie" onclick="toggleMenu()">Galerie</a><br>
     <a href="#horaires" onclick="toggleMenu()">Horaires</a>
-    <a href="#galerie" onclick="toggleMenu()">Galerie</a>
   </div>
 </header>
 
-<!-- ========== HERO ========== -->
+<!-- HERO -->
 <section id="hero">
-  <h1>BARBER <span>BROTHERS</span></h1>
-  <p>L'art de la coupe et de la barbe</p>
-  <a href="#services" class="btn">DÉCOUVREZ NOS SERVICES</a>
+  <div class="content">
+    <h1>BARBER <span>BROTHERS</span></h1>
+    <p>L'art de la coupe et de la barbe</p>
+    <a href="#services" class="btn">DÉCOUVREZ NOS SERVICES</a>
+  </div>
 </section>
 
-<!-- ========== SERVICES ========== -->
+<!-- SERVICES -->
 <section id="services">
   <div class="container">
     <h2>Nos Services</h2>
-    <div class="grid3">
-      <div class="card">
+    <div class="serv-grid">
+      <div class="serv-card">
         <h3>Coupe Homme</h3>
         <p>Coupe personnalisée adaptée à votre style et morphologie.</p>
-        <div class="price">12 €</div>
+        <div class="price">25 €</div>
       </div>
-      <div class="card">
+      <div class="serv-card">
         <h3>Taille de Barbe</h3>
         <p>Taille et entretien expert de votre barbe.</p>
-        <div class="price">7 €</div>
+        <div class="price">15 €</div>
       </div>
-      <div class="card gold">
-        <span style="background:var(--gold);color:var(--black);font-size:.7rem;padding:.2rem .6rem;letter-spacing:.1em">POPULAIRE</span>
+      <div class="serv-card">
         <h3>Forfait Coupe + Barbe</h3>
         <p>L'expérience complète pour un look impeccable.</p>
-        <div class="price">17 €</div>
+        <div class="price">35 €</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== HORAIRES & CONTACT + GOOGLE MAP ========== -->
-<section id="horaires">
-  <div class="container">
-    <h2>Horaires & Contact</h2>
-    <div class="flex2">
-      <div>
-        <h3>Horaires d'ouverture</h3>
-        <ul class="horaires-list">
-          <li><span>Lundi</span><span class="closed">Fermé</span></li>
-          <li><span>Mardi</span><span>10h00 - 20h00</span></li>
-          <li><span>Mercredi</span><span>10h00 - 20h00</span></li>
-          <li><span>Jeudi</span><span>10h00 - 20h00</span></li>
-          <li><span>Vendredi</span><span>10h00 - 20h00</span></li>
-          <li><span>Samedi</span><span>10h00 - 20h00</span></li>
-          <li><span>Dimanche</span><span>10h00 - 20h00</span></li>
-        </ul>
-        <p style="margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.6)">Pas de rendez-vous nécessaire – premier arrivé, premier servi !</p>
-      </div>
-      <div>
-        <h3>Adresse</h3>
-        <p>842 Rue de Paris<br>60520 La Chapelle-en-Serval</p>
-        <p style="margin-top:1rem"><strong>Tél :</strong> <a href="tel:+33123456789" style="color:var(--gold)">01 23 45 67 89</a></p>
-
-        <!-- GOOGLE MAP CHAPPELLE-EN-SERVAL -->
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.2!2d2.616!3d49.233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6053f4c4e7c3d%3A0x0!2zNDnCsDEzJzU5LjAiTiAyrDA2JzU3LjYiRQ!5e0!3m2!1sfr!2sfr!4v1234567890123"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== GALERIE ========== -->
+<!-- GALERIE -->
 <section id="galerie">
   <div class="container">
     <h2>Galerie</h2>
-    <div class="gallery">
+    <div class="gal-grid">
       <img src="images/gal1.jpg" alt="Coupe réalisée">
       <img src="images/gal2.jpg" alt="Barbe soignée">
       <img src="images/gal3.jpg" alt="Salon">
@@ -210,7 +139,37 @@
   </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- HORAIRES & CONTACT -->
+<section id="horaires">
+  <div class="container">
+    <h2>Horaires & Contact</h2>
+    <div class="hor-grid">
+      <div class="hor-card">
+        <h3>Horaires d'ouverture</h3>
+        <ul class="hor-list">
+          <li><span>Lundi</span><span class="closed">Fermé</span></li>
+          <li><span>Mardi</span><span>10h00 - 20h00</span></li>
+          <li><span>Mercredi</span><span>10h00 - 20h00</span></li>
+          <li><span>Jeudi</span><span>10h00 - 20h00</span></li>
+          <li><span>Vendredi</span><span>10h00 - 20h00</span></li>
+          <li><span>Samedi</span><span>10h00 - 20h00</span></li>
+          <li><span>Dimanche</span><span>10h00 - 20h00</span></li>
+        </ul>
+        <p style="margin-top:1rem;font-size:.9rem;color:#555">Pas de rendez-vous nécessaire – premier arrivé, premier servi !</p>
+      </div>
+      <div class="hor-card">
+        <h3>Adresse</h3>
+        <p>842 Rue de Paris<br>60520 La Chapelle-en-Serval</p>
+        <p style="margin-top:1rem"><strong>Tél :</strong> <a href="tel:+33123456789" style="color:var(--gold)">01 23 45 67 89</a></p>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.2!2d2.616!3d49.233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6053f4c4e7c3d%3A0x0!2zNDnCsDEzJzU5LjAiTiAyrDA2JzU3LjYiRQ!5e0!3m2!1sfr!2sfr!4v1234567890123" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="social">
@@ -224,7 +183,8 @@
 <script>
   /* Sticky header */
   window.addEventListener('scroll',()=>{
-    document.getElementById('header').classList.toggle('scrolled', window.scrollY>50);
+    const h=document.getElementById('header');
+    h.classList.toggle('scrolled',window.scrollY>50);
   });
   /* Smooth scroll */
   function scrollToId(id){
